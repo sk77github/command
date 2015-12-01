@@ -1,0 +1,16 @@
+
+display  env
+
+go：
+go  env；  the go language env
+
+
+
+php：
+
+
+
+
+apache
+apachectl -V   查看编译设置
+
