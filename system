@@ -1,16 +1,26 @@
 
-display  env
+1,display  env
 
 go：
-go  env；  the go language env
-
-
+go  env  //the go language env
 
 php：
 
-
-
-
 apache
-apachectl -V   查看编译设置
+apachectl -V   //查看编译设置
 
+
+
+
+2,the path
+
+set some path
+
+vim .bashrc
+export GOPATH=$HOME/go   //the go path
+
+
+3,user and privilege
+
+
+4，monitor
