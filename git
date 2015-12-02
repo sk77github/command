@@ -1,0 +1,56 @@
+git branch             查看当前分支
+git branch -a          查看所有分支
+git checkout test      切换分支到test
+
+
+git init
+git status
+git diff  filename
+git add   filename  （添加文件,提交修改与添加文件一样,与删除时的git rm 一个级别）
+git commit -m "xxx"  （真添加文件 提交到仓库）
+git push（本地提交更改过的代码到远程git库，注意是全部）
+git pull（服务器从远程git库拉全部更改过的代码，注意是全部）
+rm text.txt（本地删除文件）
+git checkout -- test.txt（误删后 仓库恢复文件）
+git rm test.txt(真想删除 仓库删文件）
+git commit -m "remove test.txt"（真想删除 将仓库删提交）
+git rm . （git commit -am "message" (a表示所有 m备注信息）删除当前目录所有文件）
+
+git clone git@jdb-dev.com:server/support.git （从远端服务器clone代码）
+git reset --hard（删除服务器文件后，在执行 git pull)
+git mv filefrom fileto （重命名）
+git log
+git reset --hard commit_id
+git reflog
+git diff HEAD -- filename (查看工作区与版本库区别)
+
+git remote add origin https://github.com/sk77github/sk77github.git
+git push -u origin master
+git remote
+git remote -v （查看远程项目名与地址）
+
+
+Command line instructions
+
+Git global setup
+
+git config --global user.name "许武"
+git config --global user.email "xuwu@jiedaibao.com"
+
+Create a new repository
+
+git clone git@jdb-dev.com:server/support.git
+cd support
+touch README.md
+git add README.md
+git commit -m "add README"
+git push -u origin master
+
+Existing folder or Git repository
+
+cd existing_folder
+git init
+git remote add origin git@jdb-dev.com:server/support.git
+git add .
+git commit
+git push -u origin master
