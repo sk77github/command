@@ -1,6 +1,8 @@
 config:
 ln -s /var/python3/bin/python3.3 /usr/bin/python
 
+ rpm -ql mysql   查看yum安装位置
+
 
 
 1,display  env
