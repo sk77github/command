@@ -1,7 +1,13 @@
 config:
 ln -s /var/python3/bin/python3.3 /usr/bin/python
 
- rpm -ql mysql   查看yum安装位置
+rpm -ql mysql   查看yum安装位置
+
+php环境配置
+cd php-5.6.11/ext/zip
+/data1/php/bin/phpize
+./configure --with-php-config=/data1/php/bin/php-config
+ 
 
 
 
