@@ -14,7 +14,9 @@
 
 
 config:
-ln -s /var/python3/bin/python3.3 /usr/bin/python
+echo $PATH
+which python
+ln -s /usr/local/bin/python2.7 /usr/bin/python 
 
 rpm -ql mysql   查看yum安装位置
 
