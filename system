@@ -18,6 +18,7 @@ echo $PATH
 which python
 ln -s /usr/local/bin/python2.7 /usr/bin/python 
 
+yum,rpm
 rpm -ql mysql   查看yum安装位置
 
 
