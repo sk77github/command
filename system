@@ -60,3 +60,7 @@ export GOPATH=$HOME/go   //the go path
 
 
 4，monitor
+
+
+5.跟踪
+tcpdump -i bond0 port 8085 -s 0 -w - | strings
