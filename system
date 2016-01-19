@@ -35,6 +35,11 @@ fdisk -l
 df -h
 
 
+环境配置
+
+显示系统环境配置
+export
+
 1,display  env
 
 go：
