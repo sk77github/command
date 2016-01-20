@@ -20,6 +20,15 @@ ln -s /usr/local/bin/python2.7 /usr/bin/python
 
 yum,rpm
 rpm -ql mysql   查看yum安装位置
+yum repolist all  查看yum源列表
+（?centos的一些版本没有源
+yum install epel-release 
+ls -lah /etc/yum.repos.d/
+(？rpm -e epel-release
+如果ls -lah /etc/yum.repos.d/找不到epel源，说明之前有安装脏
+需要rpm -e epel-release
+再yum install epel-release
+）
 
 
 php环境配置
