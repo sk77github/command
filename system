@@ -30,6 +30,7 @@ ls -lah /etc/yum.repos.d/
 需要rpm -e epel-release
 再yum install epel-release
 ）
+ yum remove mod_wsgi    yum删除
 
 
 php环境配置
