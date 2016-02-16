@@ -16,7 +16,10 @@
 config:
 echo $PATH
 which python
-ln -s /usr/local/bin/python2.7 /usr/bin/python 
+ln -s /usr/local/bin/python2.7 /usr/bin/python
+(把后者链到前者，使用后者实际上就是使用前者，再比如/data有空间 /opt无空间 就可以 ln -s /data/storage /opt/storage
+ 当向/opt/storage里写入时 实际上就是向/data/stroage里写入
+)
 
 yum,rpm
 rpm -ql mysql   查看yum安装位置
