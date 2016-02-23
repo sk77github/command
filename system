@@ -34,6 +34,24 @@ ls -lah /etc/yum.repos.d/
 再yum install epel-release
 ）
  yum remove mod_wsgi    yum删除
+ 
+ rpm:
+ -e, --erase=<package>+           erase (uninstall) package   删除
+ -i, --install                    install package(s)          安装
+ -v, --verbose                    provide more detailed output
+ -h, --hash                       print hash marks as package installs (good with -v)
+ -l, --list                       list files in package(with -q)
+ -U, --upgrade=<packagefile>+     upgrade package(s)          升级
+ -a, --all                        query/verify all packages
+ -q                                                           查询
+ 安装，升级，删除，查询可组合其他命令选项使用，例子：
+ rpm -q logstash                         查看某个包是否被安装
+ rpm -qa logstash                        列出所有已安装的rpm包
+ rpm -ql mysql                           查看安装位置
+ rpm -ivh logstash-2.1.1-1.noarch.rpm    安装某个rpm软件包
+ rpm -Uvh logstash-2.1.1-1.noarch.rpm    升级某个rpm包
+ rpm -e epel-release                     卸载某个已用rpm方式安装的软件
+ 
 
 
 php环境配置
