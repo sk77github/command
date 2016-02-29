@@ -13,13 +13,10 @@
 如果后台中有多个命令，可以用bg %jobnumber将选中的命令调出，%jobnumber是通过jobs命令查到的后台正在执行的命令的序号(不是pid)
 
 
-config:
-echo $PATH
-which python
-ln -s /usr/local/bin/python2.7 /usr/bin/python
-(把后者链到前者，使用后者实际上就是使用前者，再比如/data有空间 /opt无空间 就可以 ln -s /data/storage /opt/storage
- 当向/opt/storage里写入时 实际上就是向/data/stroage里写入
-)
+
+
+
+
 
 yum,rpm
 rpm -ql mysql   查看yum安装位置
@@ -51,35 +48,42 @@ ls -lah /etc/yum.repos.d/
  rpm -ivh logstash-2.1.1-1.noarch.rpm    安装某个rpm软件包
  rpm -Uvh logstash-2.1.1-1.noarch.rpm    升级某个rpm包
  rpm -e epel-release                     卸载某个已用rpm方式安装的软件
- 
 
 
-php环境配置
-cd php-5.6.11/ext/zip
-/data1/php/bin/phpize
-./configure --with-php-config=/data1/php/bin/php-config
- 
 
 
-硬盘：
-/etc/fstab    fsck、mount、umount的等命令都利用该程序
-fdisk -l      
-df -h
+
 
 
 环境配置
 
-显示系统环境配置
-export
+系统相关
+set命令显示当前shell的变量，包括当前用户的变量;
+env命令显示当前用户的变量;
+export命令显示当前导出成用户变量的shell变量。
 
-1,display  env
+echo $PATH
+which python
+ln -s /usr/local/bin/python2.7 /usr/bin/python
+(把后者链到前者，使用后者实际上就是使用前者，再比如/data有空间 /opt无空间 就可以 ln -s /data/storage /opt/storage
+ 当向/opt/storage里写入时 实际上就是向/data/stroage里写入
+)
 
-env     查看系统变量
+vim .bashrc
+export GOPATH=$HOME/go   //the go path
+
+
+1,各语音相关
 
 go语音相关：
 go  env  //the go language env
 
-php相关：
+php环境查看
+可echo出phpinfo()这个函数
+php环境配置
+cd php-5.6.11/ext/zip
+/data1/php/bin/phpize
+./configure --with-php-config=/data1/php/bin/php-config
 
 apache相关
 apachectl -V   //查看编译设置
@@ -87,12 +91,7 @@ apachectl -V   //查看编译设置
 
 
 
-2,the path
 
-set some path
-
-vim .bashrc
-export GOPATH=$HOME/go   //the go path
 
 
 ssh
@@ -110,17 +109,35 @@ zed_keys";echo $i;done
 ssh非密码形式，文件钥形式：
 ssh  -i  ~/.ssh/keyfile  root@xxx.xxx.xxx.xxx
 
-3,user and privilege
 
 
-4，monitor
 
 
-5.跟踪
+
+
+跟踪
 tcpdump -i bond0 port 8085 -s 0 -w - | strings
 
 
-6，常用命令
+
+
+
+
+
+常用命令
 scp
 scp -i ~/.ssh/dev-key .ssh/id_rsa.pub root@xxx.xxx.xxx.xxx:/root/id_rsa.pub（文件钥形式）
 scp .ssh/id_rsa.pub root@xxx.xxx.xxx.xxx:/home/sk77/id_rsa.pub（密码形式）
+
+
+
+
+
+
+
+硬件
+
+硬盘：
+/etc/fstab    fsck、mount、umount的等命令都利用该程序
+fdisk -l      
+df -h
