@@ -72,8 +72,14 @@ ln -s /usr/local/bin/python2.7 /usr/bin/python
 vim .bashrc
 export GOPATH=$HOME/go   //the go path
 
+vim  /etc/profile文件 （全局所有用户）
+export GOPATH=$HOME/go 
 
-1,各语音相关
+
+语音举例：
+whereis java
+which java （java执行路径）
+
 
 go语音相关：
 go  env  //the go language env
