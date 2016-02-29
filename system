@@ -116,3 +116,9 @@ ssh  -i  ~/.ssh/keyfile  root@xxx.xxx.xxx.xxx
 
 5.跟踪
 tcpdump -i bond0 port 8085 -s 0 -w - | strings
+
+
+6，常用命令
+scp
+scp -i ~/.ssh/dev-key .ssh/id_rsa.pub root@xxx.xxx.xxx.xxx:/root/id_rsa.pub（文件钥形式）
+scp .ssh/id_rsa.pub root@xxx.xxx.xxx.xxx:/home/sk77/id_rsa.pub（密码形式）
