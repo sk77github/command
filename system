@@ -96,7 +96,7 @@ vim  /etc/profile文件 （全局所有用户）
 export GOPATH=$HOME/go 
 
 
-语音举例：
+语言举例：
 whereis java
 which java （java执行路径）
 
