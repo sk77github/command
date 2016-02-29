@@ -105,6 +105,8 @@ ssh
 for i in 1 2 3;do ssh-keygen -t rsa -P '';echo $i;scp .ssh/id_rsa.pub root@xx.xx.xx.$i:/root/id_rsa.pub;ssh xx.xx.xx.$i "cat /root/id_rsa.pub >> .ssh/authori
 zed_keys";echo $i;done
 
+ssh非密码形式，文件钥形式：
+ssh  -i  ~/.ssh/keyfile  root@xxx.xxx.xxx.xxx
 
 3,user and privilege
 
