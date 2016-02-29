@@ -118,7 +118,9 @@ lrwxrwxrwx 1 root root 22 Jan 14 19:34 /usr/bin/java -> /etc/alternatives/java
 lrwxrwxrwx 1 root root 46 Jan 14 19:34 /etc/alternatives/java -> /usr/lib/jvm/jre-1.7.0-openjdk.x86_64/bin/java
 
 编辑/etc/profile文件
-/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.91.x86_64/jre  （这个机器应该有调整，
+/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.91.x86_64/jre  （这个机器应该有调整，JDK的路径较怪异）
+执行source /etc/profile命令
+echo $JAVA_HOME 验证是否配置成功
 
 
 
