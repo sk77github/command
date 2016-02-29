@@ -74,12 +74,14 @@ export
 
 1,display  env
 
-go：
+env     查看系统变量
+
+go语音相关：
 go  env  //the go language env
 
-php：
+php相关：
 
-apache
+apache相关
 apachectl -V   //查看编译设置
 
 
