@@ -49,23 +49,6 @@ ls -lah /etc/yum.repos.d/
  rpm -Uvh logstash-2.1.1-1.noarch.rpm    升级某个rpm包
  rpm -e epel-release                     卸载某个已用rpm方式安装的软件
  
- 配合查看rpm方式安装的程序路径：
- [root@i-be9r027r jvm]# rpm -qa | grep java
-java-1.8.0-openjdk-1.8.0.51-1.b16.el6_7.x86_64
-java-1.8.0-openjdk-headless-1.8.0.51-1.b16.el6_7.x86_64
-java-1.7.0-openjdk-1.7.0.91-2.6.2.2.el6_7.x86_64
-tzdata-java-2015f-1.el6.noarch
-[root@i-be9r027r jvm]# 
-[root@i-be9r027r jvm]# rpm -ql java-1.7.0-openjdk
-
-推导安装路径：
-[root@i-be9r027r jvm]# which java
-/usr/bin/java
-[root@i-be9r027r jvm]# ls -lah /usr/bin/java
-lrwxrwxrwx 1 root root 22 Jan 14 19:34 /usr/bin/java -> /etc/alternatives/java
-[root@i-be9r027r jvm]# ls -lah /etc/alternatives/java
-lrwxrwxrwx 1 root root 46 Jan 14 19:34 /etc/alternatives/java -> /usr/lib/jvm/jre-1.7.0-openjdk.x86_64/bin/java
- 
 
 
 
@@ -94,6 +77,7 @@ export GOPATH=$HOME/go   //the go path
 
 vim  /etc/profile文件 （全局所有用户）
 export GOPATH=$HOME/go 
+编辑完/etc/profile文件后，需要执行 source /etc/profile 使之生效
 
 
 语言举例：
@@ -113,6 +97,29 @@ cd php-5.6.11/ext/zip
 
 apache相关
 apachectl -V   //查看编译设置
+
+
+配置JAVA_HOME举例
+ 查看rpm方式安装的程序路径：
+ [root@i-be9r027r jvm]# rpm -qa | grep java
+java-1.8.0-openjdk-1.8.0.51-1.b16.el6_7.x86_64
+java-1.8.0-openjdk-headless-1.8.0.51-1.b16.el6_7.x86_64
+java-1.7.0-openjdk-1.7.0.91-2.6.2.2.el6_7.x86_64
+tzdata-java-2015f-1.el6.noarch
+[root@i-be9r027r jvm]# 
+[root@i-be9r027r jvm]# rpm -ql java-1.7.0-openjdk
+
+推导安装路径：
+[root@i-be9r027r jvm]# which java
+/usr/bin/java
+[root@i-be9r027r jvm]# ls -lah /usr/bin/java
+lrwxrwxrwx 1 root root 22 Jan 14 19:34 /usr/bin/java -> /etc/alternatives/java
+[root@i-be9r027r jvm]# ls -lah /etc/alternatives/java
+lrwxrwxrwx 1 root root 46 Jan 14 19:34 /etc/alternatives/java -> /usr/lib/jvm/jre-1.7.0-openjdk.x86_64/bin/java
+
+编辑/etc/profile文件
+/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.91.x86_64/jre  （这个机器应该有调整，
+
 
 
 
