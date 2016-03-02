@@ -138,8 +138,8 @@ ssh
 [chenlb@B ~]$ cat id_rsa.pub >> .ssh/authorized_keys
 [chenlb@B ~]$ chmod 600 .ssh/authorized_keys
 脚本：
-for i in 1 2 3;do ssh-keygen -t rsa -P '';echo $i;scp .ssh/id_rsa.pub root@xx.xx.xx.$i:/root/id_rsa.pub;ssh xx.xx.xx.$i "cat /root/id_rsa.pub >> .ssh/authori
-zed_keys";echo $i;done
+for i in 1 2 3;do ssh-keygen -t rsa -P '';echo $i;scp .ssh/id_rsa.pub root@xx.xx.xx.$i:/root/id_rsa.pub;
+ssh xx.xx.xx.$i "cat /root/id_rsa.pub >> .ssh/authorized_keys";echo $i;done
 
 ssh非密码形式，文件钥形式：
 ssh  -i  ~/.ssh/keyfile  root@xxx.xxx.xxx.xxx
