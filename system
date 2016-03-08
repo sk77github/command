@@ -160,6 +160,10 @@ tcpdump -i bond0 port 8085 -s 0 -w - | strings
 
 
 常用命令
+
+groupadd hadoop
+useradd hadoop -g hadoop
+
 scp
 “scp”调用SSH进行登录，然后拷贝文件，最后调用SSH关闭这个连接。
 scp -i ~/.ssh/dev-key .ssh/id_rsa.pub root@xxx.xxx.xxx.xxx:/root/id_rsa.pub（文件钥形式）
