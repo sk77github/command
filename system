@@ -170,6 +170,20 @@ scp -i ~/.ssh/dev-key .ssh/id_rsa.pub root@xxx.xxx.xxx.xxx:/root/id_rsa.pub（�
 scp .ssh/id_rsa.pub root@xxx.xxx.xxx.xxx:/home/sk77/id_rsa.pub（密码形式）
 
 
+kill
+kill -0
+kill -9
+通常，应该发送15，等一两秒钟，如果没效果，发送2，如果还不行，发送1。如果还不行，那你应该把那个程序删掉，因为那个程序写的太烂了！
+不要使用kill -9。不要用收割机来修剪花盆里的花。
+总之，在使用kill -9前，你应该先使用kill -15，给目标进程一个清理善后工作的机会。(进程也许无法捕捉或直接忽略SIGKILL信号，但它们可以，
+通常也是能够捕捉SIGTERM信号的。)如果你不留机会让进程完成清理工作，它们会留下一些不完整的文件或状态，当系统重启时，
+程序将无法理解这些状态。
+strace/truss，ltrace和gdb都是查看一个卡住的进程因何卡住的好工具。(Solaris里的truss -u非常好用；)Solaris里还有一些
+非常有用的/proc相关的工具，有一些已经被移植到了Linux上。
+
+kill -TERM
+
+
 
 
 
