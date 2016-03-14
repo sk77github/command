@@ -203,6 +203,18 @@ kill -15 pid &&  /opt/logstash/bin/logstash agent -f ${LS_CONF_DIR} -l ${LS_LOG_
 
 nohup,screen,& 三者的用法：
 
+1.当交互bash退出的时候，比如exit或logout，它会发送SIGHUP到它的所有作业，作业下的所有子进程都会收到SIGHUP。
+2.当终端挂断的时候，终端驱动会发送SIGHUP到它的控制进程，通常我们登录后控制进程就是bash，它收到SIGHUP，然后退出，退出的过程参1
+3.显然不想让一个进程被bash发送的SIGHUP中止通常用三种方法：
+  a.自己处理SIGHUP
+  b.忽略SIGHUP(用nohup命令或disown -h)
+  c.脱离交互bash的作业(比如用disown，在脚本中发起后台命令，在nestedsubshell中发起后台命令)
+  
+在交互bash里使用了&的启动命令，和在脚本里使用&的启动命令一样吗？现在确定的是，在脚本里启动，就属于后台启动了，不属于当前运行脚本的
+交互bash了。那直接在当前交互bash里，使用了&的命令呢？
+
+screen应该是和在脚本里使用&一个道理，都是后台启动。screen的好处是可以调出查看。nohup就是忽略SIGHUP了。
+
 
 
 
