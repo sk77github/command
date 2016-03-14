@@ -201,6 +201,9 @@ kill -15 pid &&  /opt/logstash/bin/logstash agent -f ${LS_CONF_DIR} -l ${LS_LOG_
 
 
 
+nohup,screen,& 三者的用法：
+
+
 
 
 
