@@ -158,6 +158,9 @@ ssh xx.xx.xx.$i "cat /root/id_rsa.pub >> .ssh/authorized_keys";echo $i;done
 ssh非密码形式，文件钥形式：
 ssh  -i  ~/.ssh/keyfile  root@xxx.xxx.xxx.xxx
 
+提示Enter passphrase for key时解决：
+http://www.cnblogs.com/lovingprince/archive/2011/08/04/2166213.html
+
 
 
 
