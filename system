@@ -66,6 +66,9 @@ ls -lah /etc/yum.repos.d/
 
 
 
+安装：
+安装rz sz：
+yum install lrzsz
 
 
 
