@@ -5,6 +5,18 @@
 man 脚本名
 
 
+压缩与解压缩：
+安装：
+apt-get install rar unrar
+wget http://www.rarlab.com/rar/rarlinux-x64-5.4.0.tar.gz
+tar -zxvf rarlinux-x64-5.4.0.tar.gz
+cd rar
+make
+
+使用
+unrar x 文件名
+
+
 
 
 
