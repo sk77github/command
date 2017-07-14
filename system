@@ -276,3 +276,4 @@ ip：http://os.51cto.com/art/201406/441461.htm
 /etc/fstab    fsck、mount、umount的等命令都利用该程序
 fdisk -l      
 df -h
+ df -lhT  查看磁盘容量及文件系统类型
