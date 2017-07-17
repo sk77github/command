@@ -271,9 +271,10 @@ linux查看相关
 
 硬盘：
 /etc/fstab    fsck、mount、umount的等命令都利用该程序
-fdisk -l      
+fdisk -l      查看数据盘信息
 df -h
-df -lhT  查看磁盘容量及文件系统类型
+df -lhT  查看磁盘容量及文件系统类型,没有分区和格式化数据盘之前，无法看到数据盘
+fdisk /dev/vdb  对数据盘进行分区
 
 cpu：
 cat /proc/cpuinfo
@@ -284,3 +285,7 @@ cat /proc/meminfo
 版本：
 cat /proc/version  
 cat /etc/redhat-release
+
+
+查看所有运行服务：
+service  --status-all
