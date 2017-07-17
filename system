@@ -266,14 +266,21 @@ ip：http://os.51cto.com/art/201406/441461.htm
  -help：显示帮助。
 
 
-
-
-
-
-硬件
+----------------------------------------------------------------------------------------------------
+linux查看相关
 
 硬盘：
 /etc/fstab    fsck、mount、umount的等命令都利用该程序
 fdisk -l      
 df -h
- df -lhT  查看磁盘容量及文件系统类型
+df -lhT  查看磁盘容量及文件系统类型
+
+cpu：
+cat /proc/cpuinfo
+
+内存：
+cat /proc/meminfo
+
+版本：
+cat /proc/version  
+cat /etc/redhat-release
