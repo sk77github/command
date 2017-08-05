@@ -334,7 +334,7 @@ service  --status-all
 以上这些必要的基础依赖，在以后其他组件的安装及使用过程中需要用到，所以要提前装好
 对于基础依赖，要有个共识印象
 
-
+编译安装php apache http://php.net/manual/zh/install.unix.apache2.php
 例如编译安装apche，报configure: error: pcre-config for libpcre not found
 
 这样安装依赖：
