@@ -349,3 +349,4 @@ make install
 3. Go back to where your Apache installation is and compile Apache with PCRE:
 --with-pcre=/usr/local/pcre
 
+安装依赖时，小组件的版本也要注意，比如安装httpd2.4时，下了最新的apr-util1.6不行，需要apr-util-1.5.4
