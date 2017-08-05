@@ -323,3 +323,32 @@ service  --status-all
 
 进程
 查看进程树： pstree -p 进程号
+
+
+
+---------------------------------------------------------------------------------------------
+编译安装：
+
+# yum groupinstall "Development tools"
+# yum install zlib-devel bzip2-devel openssl-devel ncurses-devel zx-devel \
+      sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel
+      python-devel libffi-devel （libxml2-devel openssl-devel libxslt-devel gcc libgcc glibc）
+      mysql-devel.x86_64
+以上这些必要的基础依赖，在以后其他组件的安装及使用过程中需要用到，所以要提前装好
+对于基础依赖，要有个共识印象
+
+
+例如编译安装apche，报configure: error: pcre-config for libpcre not found
+
+这样安装依赖：
+下载源码
+1. Download PCRE from PCRE.org
+确定安装路径
+2. Compile it with a prefix and install it:
+./configure --prefix=/usr/local/pcre
+make
+make install
+带上所需要依赖的安装路径
+3. Go back to where your Apache installation is and compile Apache with PCRE:
+--with-pcre=/usr/local/pcre
+
