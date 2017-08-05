@@ -335,6 +335,8 @@ service  --status-all
 对于基础依赖，要有个共识印象
 
 编译安装php apache http://php.net/manual/zh/install.unix.apache2.php
+./configure --with-apxs2=/usr/local/apache2/bin/apxs --with-mysql --with-pdo-mysql --with-curl
+
 例如编译安装apche，报configure: error: pcre-config for libpcre not found
 
 这样安装依赖：
