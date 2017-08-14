@@ -371,7 +371,8 @@ make
 make install
 
 php：
-./configure --with-apxs2=/usr/local/apache2/bin/apxs --with-mysql --with-pdo-mysql --with-curl --with-ssh2
+./configure --with-apxs2=/usr/local/apache2/bin/apxs --with-mysql --with-pdo-mysql --with-curl
+cp php.ini-development /usr/local/lib/php.ini
 
 
 
