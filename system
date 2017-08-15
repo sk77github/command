@@ -371,6 +371,7 @@ make
 make install
 
 php：
+yum list installed |grep php  (把原有的yum安装脏都干掉)
 ./configure --with-apxs2=/usr/local/apache2/bin/apxs --with-mysql --with-pdo-mysql --with-curl
 cp php.ini-development /usr/local/lib/php.ini
 
