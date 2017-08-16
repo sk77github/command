@@ -45,6 +45,7 @@ nohup php test.php > xxx.log 2>&1 &
 
 
 yum,rpm
+yum list installed  查看机器上已经用yum安装了的包
 rpm -ql mysql   查看yum安装位置
 yum repolist all  查看yum源列表
 yum grouplist     查看已安装和可安装的工具包group
