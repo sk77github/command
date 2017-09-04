@@ -252,16 +252,63 @@ ping
 telnet
 nslookup
 
-节点（node）
+节点（node）：具有ip的设备
 server
 client
 网卡
-网口
+网口：        eth0 ，lo等
 拓扑
 路由
-网关
-局域网  内网
-广域网  外网
+网关        ：具有两个以上的网络接口， 可以连接两个以上不同的网段的设备
+局域网LAN  内网 
+广域网WAN  外网
+
+TCP/IP:
+
+链路层：  
+LAN：Ethernet
+WAN：
+arp（ip地址与MAC地址的对应，mac地址网卡出厂时就会设定唯一的）
+mac数据包，网络上数据传输的最小单位，MAC数据包跨过路由器，经过不同的网域，那么来源与目的的硬件地址（mac地址）就会跟着改变
+mac地址可由ifconfig命令查看
+
+网络层：
+IP
+ICMP
+
+传输层：
+TCP
+UDP
+
+应用层：
+HTTP
+DNS
+SSH
+NFS
+FTP
+SMTP
+POP3
+
+
+
+CSMA/CD：
+多点传输 (Multiple Access)：
+我的计算机明明没有被入侵，为何我的数据会被隔壁的计算机窃取？
+就因为多点传送，原本其他node收到数据不是给它的就丢弃，
+但它为了窃取，利用监听软件把该丢弃的数据收集下来了
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
