@@ -38,7 +38,10 @@ unrar x 文件名
 不间断在后台运行守护进程
 nohup php test.php > xxx.log 2>&1 &
 
-
+0 stdin   标准输入
+1 stdout  标准输出
+2 stderr  标准错误
+> 重定向符
 
 
 
