@@ -1,0 +1,4 @@
+
+cut命令，取列
+cut -d ',' -f  1-10  /Users/rice/Documents/FilteredShenWan/index_industry_table.csv
+取用逗号分隔的 1到10列 使用域模式（-f参数指定） 
