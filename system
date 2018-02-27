@@ -238,6 +238,8 @@ chkconfig [服务] off	systemctl disable [unit type]	设备服务禁止开机启
 跟踪
 tcpdump -i bond0 port 8085 -s 0 -w - | strings
 
+strace -p pid we can get the process run infometion
+
 
 
 
