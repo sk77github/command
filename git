@@ -65,6 +65,12 @@ git push的一般形式为 git push <远程主机名> <本地分支名>  <远程
 如果远程分支被省略，如上则表示将本地分支推送到与之存在追踪关系的远程分支（通常两者同名），如果该远程分支不存在，则会被新建
 
 
+git tag
+列出现有标签   git tag
+新建标签       git tag -a v1.4 -m 'my version 1.4'
+查看某个标签   git show v1.4
+
+
 git init
 git status
 git diff  filename
