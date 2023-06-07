@@ -4,6 +4,18 @@
 程序自带文档
 man 脚本名
 
+curl:
+curl -X POST 'http://localhost:<port>/api/chat' \
+-H 'Content-Type: application/json' \
+-d '{
+    "question": "<your_question>",
+    "history": "<your_history>"
+}'
+
+curl -X GET 'https://cn.aliyun.com/?from_alibabacloud=' -H 'Content-Type: application/html'
+
+
+
 
 压缩与解压缩：
 安装：
